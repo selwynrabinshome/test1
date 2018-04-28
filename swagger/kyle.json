@@ -1,0 +1,39 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Kyle Service Endpoint",
+    "version": "1.0.0",
+    "title": "Kyle Service Endpoint"
+  },
+  "host": "{{host}}",
+  "basePath": "{{basePath}}",
+  "schemes": [
+    "{{scheme}}"
+  ],
+  "paths": {
+    "/api/v1/webhooks/callrail": {
+      "post": {
+        "operationId": "callrail",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "payload": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful request."
+          }
+        }
+      }
+    }
+  }
+}
